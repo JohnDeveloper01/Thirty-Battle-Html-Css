@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+body {
+  line-height: 1.5;
+  background-color: #dadada;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+.wrapper {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: auto;
+}
+.image {
+  width: 22%;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.2s;
+}
+.image:hover img {
+  transform: scale(1.2);
+}
+.gallery {
+  position: fixed;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  /* click galley vo nghia khi click vao */
+  transform: scale(0.8);
+  margin: auto;
+  transition: all 0.5s;
+}
+.btn-close {
+  position: fixed;
+  top: 15px;
+  right: 40px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+.gallery-control {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+}
+.gallery-control.prev {
+  left: 15px;
+}
+.gallery-control.next {
+  right: 15px;
+}
+.gallery-inner {
+  width: 70%;
+  height: 70%;
+  margin: 0 auto;
+}
+.gallery-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  /* click galley vo nghia khi click vao */
+  transform: scale(1);
+}
+.hide {
+  display: none;
+}
